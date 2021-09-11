@@ -26,4 +26,9 @@ public class ControladorPersona {
     public Persona guardarPersona(@RequestBody Persona persona){
         return servicio.guardar(persona);
     }
+
+    @DeleteMapping("borrarPersona/{id}")
+    public void borrarPersona(@PathVariable("id") int id){
+        servicio.borrar(id);
+    }
 }
